@@ -7,7 +7,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 import android.view.Menu;
-import android.widget.Toast;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -21,12 +20,14 @@ public class MainActivity extends AppCompatActivity {
     TextView userText6;
     SharedPreferences sPref;
 
-    final String SAVED_TEXT = "saved_text";
+    final String SAVED_TEXT = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
 
         userText = (TextView)findViewById(R.id.textView6);
         userText1 = (TextView)findViewById(R.id.textView8);
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
         counter += 1;
 
-        Toast.makeText(MainActivity.this, "Text loaded", Toast.LENGTH_SHORT).show();
+
     }
 
 

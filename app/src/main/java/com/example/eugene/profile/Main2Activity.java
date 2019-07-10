@@ -12,7 +12,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.Toast;
 
 
 public class Main2Activity extends AppCompatActivity {
@@ -27,12 +26,11 @@ public class Main2Activity extends AppCompatActivity {
     EditText etText6;
 
 
-    Button btnSave, btnLoad;
+    Button btnSave;
     SharedPreferences sPref;
     SharedPreferences sPref2;
 
-
-    final String SAVED_TEXT = "saved_text";
+    final String SAVED_TEXT = "";
 
 
     @Override
@@ -52,8 +50,6 @@ public class Main2Activity extends AppCompatActivity {
 
         ActionBar ab = getSupportActionBar();
         LayoutInflater li = LayoutInflater.from(this);
-       // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        //getSupportActionBar().setHomeButtonEnabled(true);
         View customView = li.inflate(R.layout.my_action_bar, null);
         ab.setCustomView(customView);
         ab.setDisplayShowCustomEnabled(true);
@@ -72,7 +68,6 @@ public class Main2Activity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        setTitle("Edit profile");
         getMenuInflater().inflate(R.menu.main2, menu);
         return true;
     }
@@ -86,7 +81,7 @@ public class Main2Activity extends AppCompatActivity {
         ed.putString(SAVED_TEXT, edit.getText().toString());
         ed.commit();
 
-        Toast.makeText(Main2Activity.this, "Text saved", Toast.LENGTH_SHORT).show();
+
 
 
     }
