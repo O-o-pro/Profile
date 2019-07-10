@@ -2,15 +2,10 @@ package com.example.eugene.profile;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
 import android.view.MenuItem;
-import android.view.View;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.widget.AdapterView;
 import android.widget.TextView;
-import android.widget.SimpleCursorAdapter;
 import android.view.Menu;
 import android.widget.Toast;
 

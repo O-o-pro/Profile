@@ -27,8 +27,6 @@ public class Main2Activity extends AppCompatActivity {
     EditText etText6;
 
 
-
-
     Button btnSave, btnLoad;
     SharedPreferences sPref;
     SharedPreferences sPref2;
@@ -52,7 +50,6 @@ public class Main2Activity extends AppCompatActivity {
 
         btnSave = (Button)findViewById(R.id.item3);
 
-
         ActionBar ab = getSupportActionBar();
         LayoutInflater li = LayoutInflater.from(this);
        // getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -71,8 +68,13 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 
+    }
 
-
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        setTitle("Edit profile");
+        getMenuInflater().inflate(R.menu.main2, menu);
+        return true;
     }
 
     int counter = 0;
@@ -87,21 +89,6 @@ public class Main2Activity extends AppCompatActivity {
         Toast.makeText(Main2Activity.this, "Text saved", Toast.LENGTH_SHORT).show();
 
 
-    }
-
-
-
-
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        //saveText();
-    }
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        setTitle("Edit profile");
-        getMenuInflater().inflate(R.menu.main2, menu);
-        return true;
     }
 
    @Override
@@ -127,5 +114,9 @@ public class Main2Activity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
 
+    }
 }
